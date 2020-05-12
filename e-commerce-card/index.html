@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>E-commerce Card</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <figure class="figure">
+          <img alt="Nike Shoes" src="shoes.png" />
+        </figure>
+
+        <div class="content">
+          <h2>Nike Shoes</h2>
+
+          <div class="sizes">
+            <h3>Size:</h3>
+            <span data-option="1" onclick="selectOption('size', this)">7</span>
+            <span data-option="2" onclick="selectOption('size', this)">8</span>
+            <span data-option="3" onclick="selectOption('size', this)">9</span>
+            <span data-option="4" onclick="selectOption('size', this)">10</span>
+          </div>
+
+          <div class="colors">
+            <h3>Color:</h3>
+            <span data-option="1" onclick="selectOption('color', this)"></span>
+            <span data-option="2" onclick="selectOption('color', this)"></span>
+            <span data-option="3" onclick="selectOption('color', this)"></span>
+          </div>
+
+          <a class="buy" href="#" onclick="handleBuy()">Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts.js" charset="utf-8"></script>
+  </body>
+</html>
