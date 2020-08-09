@@ -18,45 +18,57 @@ div {
   justify-content: center;
 }
 
-div::before {
-  content: "";
-  position: absolute;
-
-  width: 120px;
-  height: 120px;
-
-  border: solid 6px #f00;
-  border-left-color: transparent;
-  border-radius: 50%;
-
-  animation: clockwise 1.5s linear infinite;
-}
-
 div {
   position: relative;
 
   width: 100px;
   height: 100px;
 
-  border: solid 6px #0f0;
+  border: solid 6px #f00;
   border-right-color: transparent;
   border-radius: 50%;
 
-  animation: counterclockwise 3s linear infinite;
+  animation: clockwise 1s linear infinite, opacity 1.5s linear infinite;
+}
+
+div::before {
+  content: "";
+  position: absolute;
+
+  width: 66px;
+  height: 66px;
+
+  border: solid 6px #0f0;
+  border-left-color: transparent;
+  border-radius: 50%;
+
+  animation: counterclockwise 0.5s linear infinite;
 }
 
 div::after {
   content: "";
   position: absolute;
 
-  width: 60px;
-  height: 60px;
+  width: 44px;
+  height: 44px;
 
   border: solid 6px #00f;
   border-right-color: transparent;
   border-radius: 50%;
 
   animation: clockwise 1s linear infinite;
+}
+
+@keyframes opacity {
+  from {
+    filter: opacity(100%);
+  }
+  50% {
+    filter: opacity(50%);
+  }
+  to {
+    filter: opacity(100%);
+  }
 }
 
 @keyframes clockwise {
